@@ -149,7 +149,7 @@
         /* Meowwww Text */
         .meow-text {
             font-size: 1.2rem;
-            margin-top: 20px;
+            margin-top: 40px;
             padding: 15px;
             animation: flashText 1s infinite alternate;
         }
@@ -184,6 +184,57 @@
             .nav-links a { font-size: 16px; padding: 12px 0; }
             .media-grid { grid-template-columns: 1fr; }
         }
+
+/* Tokenomics Section */
+    .tokenomics {
+        background: linear-gradient(135deg, #ff00ff, #ffcc00);
+        padding: 40px 20px; /* Added side padding */
+        border: 3px dashed #00ffff;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #ff00ff, 0 0 30px #ffcc00;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from { box-shadow: 0 0 20px #ff00ff, 0 0 30px #ffcc00; }
+        to { box-shadow: 0 0 40px #00ffff, 0 0 60px #ff6699; }
+    }
+
+    .tokenomics h2 {
+        font-size: 2rem;
+        color: #121212;
+        background: #ffcc00;
+        padding: 20px; /* Increased padding */
+        border-radius: 10px;
+        margin-bottom: 15px;
+        animation: flashText 1s infinite alternate;
+    }
+
+    .tokenomics p {
+        font-size: 0.9rem;
+        color: #ffffff;
+        margin: 10px 0;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px; /* Increased padding */
+        border-radius: 8px;
+        text-shadow: 2px 2px #ff00ff;
+    }
+
+    @media (max-width: 480px) {
+        .tokenomics {
+            padding: 40px 20px; /* Reduced side padding for smaller screens */
+        }
+        .tokenomics h2 {
+            font-size: 1.5rem;
+        }
+        .tokenomics p {
+            font-size: 0.9rem;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -193,10 +244,10 @@
             for (let i = 0; i < 100; i++) {
                 let star = document.createElement("span");
                 let size = Math.random() * 3;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
-                star.style.top = `${Math.random() * 100}vh`;
-                star.style.left = `${Math.random() * 100}vw`;
+                star.style.width = ${size}px;
+                star.style.height = ${size}px;
+                star.style.top = ${Math.random() * 100}vh;
+                star.style.left = ${Math.random() * 100}vw;
                 starsContainer.appendChild(star);
             }
         </script>
@@ -232,6 +283,14 @@
 
     <div class="image-container">
         <img src="https://i.ibb.co/9HktxD8W/cover-rizz.png" alt="cover-rizz">
+    </div>
+
+    <div class="tokenomics">
+ 	   <h2>Tokenomics</h2>
+	    <p>Total Supply: 1 Billion</p>
+	    <p>Liquidity Pool: 100% Burned</p>
+	    <p>Tax Free</p>
+	    <p>Traded on Solana</p>
     </div>
 
     <div class="meow-text">Meowwww enjoy Ladies & Pussycats</div>
